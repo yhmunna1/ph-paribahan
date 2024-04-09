@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="styles/style.css">
 </head>
 
 <body>
@@ -24,7 +24,7 @@
         <!-- Navbar -->
         <div class="navbar bg-base-100 py-6">
             <div class="navbar-start">
-                <a class="btn btn-ghost text-2xl font-extrabold">PH-Ticket</a>
+                <a class="text-2xl font-extrabold">PH-Ticket</a>
             </div>
             <div class="navbar-center hidden lg:flex">
                 <ul class="menu menu-horizontal px-1 font-medium text-gray-600">
@@ -35,15 +35,103 @@
                 </ul>
             </div>
             <div class="navbar-end">
-                <a class="btn btn-outline btn-success text-green-400">Bus
+                <a class="btn btn-outline text-[#1DD100]">Bus
                     <i class="fa-solid fa-bus"></i>
                 </a>
             </div>
         </div>
 
         <!-- Hero Section -->
-
+        <div class="bg-[url(images/banner.png)] bg-no-repeat bg-center text-center space-y-10 py-32">
+            <h1 class="text-6xl font-extrabold text-white">End-to-End Travel with <br><span class="text-[#1DD100]">PH
+                    Paribahan</span></h1>
+            <p class="font-inter text-gray-300">Yes, you can run unit tests and view the results directly
+                within the app. The <br> integrated testing features allow for a streamlined .</p>
+            <button class="btn bg-[#1DD100] border-0 font-bold">Buy Tickets</button>
+        </div>
+        <!-- Card -->
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-9 font-inter w-[970px] mx-auto mt-[-65px] mb-24">
+            <div class="bg-base-100 shadow-xl flex flex-cols-2 rounded-2xl">
+                <figure class="ps-10 pt-10">
+                    <i class="fa-solid fa-users text-5xl text-[#1DD100]"></i>
+                </figure>
+                <div class="card-body text-left">
+                    <h2 class="card-title font-bold text-4xl">500k+</h2>
+                    <p>Registered users</p>
+                </div>
+            </div>
+            <!-- Card 2 -->
+            <div class="bg-base-100 shadow-xl flex flex-cols-2 rounded-2xl">
+                <figure class="ps-10 pt-10">
+                    <i class="fa-solid fa-ticket text-5xl text-[#1DD100]"></i>
+                </figure>
+                <div class="card-body text-left">
+                    <h2 class="card-title font-bold text-4xl">1.7 lack</h2>
+                    <p>Tickets Sold</p>
+                </div>
+            </div>
+            <!-- Card 3 -->
+            <div class="bg-base-100 shadow-xl flex flex-cols-2 rounded-2xl">
+                <figure class="ps-10 pt-10">
+                    <i class="fa-solid fa-van-shuttle text-5xl text-[#1DD100]"></i>
+                </figure>
+                <div class="card-body text-left">
+                    <h2 class="card-title font-bold text-4xl">80k+</h2>
+                    <p>Rental partners</p>
+                </div>
+            </div>
     </header>
+    <main>
+        <!-- Best Offers -->
+        <section class="w-[1175px] mx-auto">
+            <h1 class="font-raleway font-bold text-gray-950 text-4xl text-center">Best offers for you</h1>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-9">
+                <!-- Ticket 1-->
+                <div class="flex w-full max-w-3xl h-64 pt-10">
+                    <!-- section-1 -->
+                    <div
+                        class="h-full bg-[#FFBF0F] ps-14 pr-24 rounded-l-3xl font-inter flex flex-col justify-center space-y-2">
+                        <h1 class="text-5xl font-black">15% OFF</h1>
+                        <h4 class="text-xl font-semibold">on your next purchase</h4>
+                        <p>use by January 2024</p>
+                    </div>
+                    <div
+                        class="relative h-full flex flex-col items-center border-dashed justify-between border-2 bg-[#FFBF0F]">
+                        <div class="absolute rounded-full w-8 h-8 bg-white -top-5"></div>
+                        <div class="absolute rounded-full w-8 h-8 bg-white -bottom-5"></div>
+                    </div>
+                    <!-- section-2 -->
+                    <div
+                        class="h-full py-8 px-10 bg-[#FFBF0F] rounded-r-3xl flex flex-col font-raleway flex flex-col justify-center space-y-2">
+                        <h1 class="text-3xl font-bold">NEW15</h1>
+                        <p>Coupon Code</p>
+                    </div>
+                </div>
+                <!-- Ticket 2-->
+                <div class="flex w-full max-w-3xl h-64 pt-10">
+                    <!-- section-1 -->
+                    <div
+                        class="h-full bg-[#F78C9C] ps-14 pr-16 rounded-l-3xl font-inter flex flex-col justify-center space-y-2">
+                        <h1 class="text-5xl font-black">20% OFF</h1>
+                        <h4 class="text-xl font-semibold">on your next purchase</h4>
+                        <p>use by January 2024</p>
+                    </div>
+                    <div
+                        class="relative h-full flex flex-col items-center border-dashed justify-between border-2 bg-[#F78C9C]">
+                        <div class="absolute rounded-full w-8 h-8 bg-white -top-5"></div>
+                        <div class="absolute rounded-full w-8 h-8 bg-white -bottom-5"></div>
+                    </div>
+                    <!-- section-2 -->
+                    <div
+                        class="h-full py-8 px-10 bg-[#F78C9C] rounded-r-3xl flex flex-col font-raleway flex flex-col justify-center space-y-2">
+                        <h1 class="text-3xl font-bold">Couple15</h1>
+                        <p>Coupon Code</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
 </body>
 
 </html>

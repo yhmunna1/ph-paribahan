@@ -35,7 +35,7 @@
                 </ul>
             </div>
             <div class="navbar-end">
-                <a class="btn btn-outline text-[#1DD100]">Bus
+                <a onclick="navigateToSection('ticket-section')" class="btn btn-outline text-[#1DD100]">Bus
                     <i class="fa-solid fa-bus"></i>
                 </a>
             </div>
@@ -136,7 +136,7 @@
         </section>
 
         <!-- Price And Destination -->
-        <section class="bg-[#F7F8F8] py-16">
+        <section id="ticket-section" class="bg-[#F7F8F8] py-16">
             <h1 class="text-5xl font-bold text-black text-center mb-3">PH Paribahan</h1>
             <p class="font-inter text-gray-700 text-center">Yes, you can run unit tests and view the results directly
                 within the
@@ -160,7 +160,7 @@
                             </div>
                             <div>
                                 <a class="btn btn-outline text-[#1DD100]"><i class="fa-solid fa-couch"></i>
-                                    <span>40</span>
+                                    <span id="seat-available">40</span>
                                     Seats left
                                 </a>
                             </div>
@@ -201,8 +201,8 @@
                     </div>
                     <!-- section-2 -->
                     <div
-                        class="h-full py-8 px-20 bg-white rounded-r-3xl flex flex-col font-raleway justify-center space-y-2 text-center">
-                        <i class="fa-solid fa-money-check-dollar text-4xl text-[#1DD100]"></i>
+                        class="h-full py-8 px-20 bg-white rounded-r-3xl flex flex-col font-raleway justify-center items-center space-y-2 text-center">
+                        <img class="w-[48px]" src="images/fare.png" alt="">
                         <h1 class="text-3xl font-bold">550 Taka</h1>
                         <p>Per Seat</p>
                     </div>
@@ -247,48 +247,48 @@
                             </div>
                             <div class="grid grid-cols-2 gap-16 w-11/12">
                                 <div class="grid grid-cols-2 gap-4">
-                                    <button class="btn py-5 px-10">A1</button>
-                                    <button class="btn py-5 px-10">A2</button>
-                                    <button class="btn py-5 px-10">B1</button>
-                                    <button class="btn py-5 px-10">B2</button>
-                                    <button class="btn py-5 px-10">C1</button>
-                                    <button class="btn py-5 px-10">C2</button>
-                                    <button class="btn py-5 px-10">D1</button>
-                                    <button class="btn py-5 px-10">D2</button>
-                                    <button class="btn py-5 px-10">E1</button>
-                                    <button class="btn py-5 px-10">E2</button>
-                                    <button class="btn py-5 px-10">F1</button>
-                                    <button class="btn py-5 px-10">F2</button>
-                                    <button class="btn py-5 px-10">G1</button>
-                                    <button class="btn py-5 px-10">G2</button>
-                                    <button class="btn py-5 px-10">H1</button>
-                                    <button class="btn py-5 px-10">H2</button>
-                                    <button class="btn py-5 px-10">I1</button>
-                                    <button class="btn py-5 px-10">I2</button>
-                                    <button class="btn py-5 px-10">J1</button>
-                                    <button class="btn py-5 px-10">J2</button>
+                                    <button id="A1" class="btn py-5 px-10">A1</button>
+                                    <button id="A2" class="btn py-5 px-10">A2</button>
+                                    <button id="B1" class="btn py-5 px-10">B1</button>
+                                    <button id="B2" class="btn py-5 px-10">B2</button>
+                                    <button id="C1" class="btn py-5 px-10">C1</button>
+                                    <button id="C2" class="btn py-5 px-10">C2</button>
+                                    <button id="D1" class="btn py-5 px-10">D1</button>
+                                    <button id="D2" class="btn py-5 px-10">D2</button>
+                                    <button id="E1" class="btn py-5 px-10">E1</button>
+                                    <button id="E2" class="btn py-5 px-10">E2</button>
+                                    <button id="F1" class="btn py-5 px-10">F1</button>
+                                    <button id="F2" class="btn py-5 px-10">F2</button>
+                                    <button id="G1" class="btn py-5 px-10">G1</button>
+                                    <button id="G2" class="btn py-5 px-10">G2</button>
+                                    <button id="H1" class="btn py-5 px-10">H1</button>
+                                    <button id="H2" class="btn py-5 px-10">H2</button>
+                                    <button id="I1" class="btn py-5 px-10">I1</button>
+                                    <button id="I2" class="btn py-5 px-10">I2</button>
+                                    <button id="J1" class="btn py-5 px-10">J1</button>
+                                    <button id="J2" class="btn py-5 px-10">J2</button>
                                 </div>
                                 <div class="grid grid-cols-2 gap-4">
-                                    <button class="btn py-5 px-10">A3</button>
-                                    <button class="btn py-5 px-10">A4</button>
-                                    <button class="btn py-5 px-10">B3</button>
-                                    <button class="btn py-5 px-10">B4</button>
-                                    <button class="btn py-5 px-10">C3</button>
-                                    <button class="btn py-5 px-10">C4</button>
-                                    <button class="btn py-5 px-10">D3</button>
-                                    <button class="btn py-5 px-10">D4</button>
-                                    <button class="btn py-5 px-10">E3</button>
-                                    <button class="btn py-5 px-10">E4</button>
-                                    <button class="btn py-5 px-10">F3</button>
-                                    <button class="btn py-5 px-10">F4</button>
-                                    <button class="btn py-5 px-10">G3</button>
-                                    <button class="btn py-5 px-10">G4</button>
-                                    <button class="btn py-5 px-10">H3</button>
-                                    <button class="btn py-5 px-10">H4</button>
-                                    <button class="btn py-5 px-10">I3</button>
-                                    <button class="btn py-5 px-10">I4</button>
-                                    <button class="btn py-5 px-10">J3</button>
-                                    <button class="btn py-5 px-10">J4</button>
+                                    <button id="A3" class="btn py-5 px-10">A3</button>
+                                    <button id="A4" class="btn py-5 px-10">A4</button>
+                                    <button id="B3" class="btn py-5 px-10">B3</button>
+                                    <button id="B4" class="btn py-5 px-10">B4</button>
+                                    <button id="C3" class="btn py-5 px-10">C3</button>
+                                    <button id="C4" class="btn py-5 px-10">C4</button>
+                                    <button id="D3" class="btn py-5 px-10">D3</button>
+                                    <button id="D4" class="btn py-5 px-10">D4</button>
+                                    <button id="E3" class="btn py-5 px-10">E3</button>
+                                    <button id="E4" class="btn py-5 px-10">E4</button>
+                                    <button id="F3" class="btn py-5 px-10">F3</button>
+                                    <button id="F4" class="btn py-5 px-10">F4</button>
+                                    <button id="G3" class="btn py-5 px-10">G3</button>
+                                    <button id="G4" class="btn py-5 px-10">G4</button>
+                                    <button id="H3" class="btn py-5 px-10">H3</button>
+                                    <button id="H4" class="btn py-5 px-10">H4</button>
+                                    <button id="I3" class="btn py-5 px-10">I3</button>
+                                    <button id="I4" class="btn py-5 px-10">I4</button>
+                                    <button id="J3" class="btn py-5 px-10">J3</button>
+                                    <button id="J4" class="btn py-5 px-10">J4</button>
                                 </div>
                             </div>
                         </div>
@@ -305,22 +305,15 @@
                             <h4 class="font-raleway font-bold text-2xl">Select Your Seat</h4>
                             <div class="border-dashed border-2 my-4"></div>
 
-                            <div class="bg-gray-100 p-5 rounded-lg">
+                            <div id="seat-details" class="bg-gray-100 p-5 rounded-lg">
                                 <div class="flex justify-between font-bold">
                                     <div>Seat</div>
                                     <div>Class</div>
                                     <div>Price</div>
                                 </div>
                                 <div class="border-dashed border-2 my-4"></div>
-                                <div class="flex justify-between py-3">
-                                    <div>C2</div>
-                                    <div>Economy</div>
-                                    <div>550</div>
-                                </div>
-                                <div class="flex justify-between">
-                                    <div>C2</div>
-                                    <div>Economy</div>
-                                    <div>550</div>
+                                <div id="specific-seat-details">
+                                    <!-- Dynamic Seat Details will be add inside this div -->
                                 </div>
                                 <div class="border border-1 my-4"></div>
                                 <div class="flex justify-between font-bold">
@@ -352,20 +345,20 @@
                                     <div class="label">
                                         <span class="label-text required font-bold">Phone Number*</span>
                                     </div>
-                                    <input type="text" placeholder="Enter your phone number"
+                                    <input type="number" placeholder="Enter your phone number"
                                         class="input input-bordered w-full max-w-xs" />
                                 </label>
-                                <!-- Name -->
+                                <!-- Email -->
                                 <label class="form-control w-full max-w-xs">
                                     <div class="label">
                                         <span class="label-text required font-bold">Email ID</span>
                                     </div>
-                                    <input type="text" placeholder="Enter your email id"
+                                    <input type="email" placeholder="Enter your email address"
                                         class="input input-bordered w-full max-w-xs" />
                                 </label>
 
                                 <!-- Button -->
-                                <button class="btn text-white bg-[#1DD100] w-full max-w-xs">Next</button>
+                                <button class="btn text-white bg-[#1DD100] w-full max-w-xs btn-disabled">Next</button>
                                 <div class="flex justify-around w-full max-w-xs">
                                     <a class="underline" href="">Terms and Conditions</a>
                                     <a class="underline" href="">Cancellation Policy</a>
@@ -384,6 +377,8 @@
 
         </section>
     </main>
+
+    <!-- Footer -->
     <footer class="py-28 bg-[#030712]">
         <div class="w-[1175px] mx-auto">
             <div class="flex justify-between items-center">
@@ -410,9 +405,11 @@
                 </div>
             </div>
         </div>
-
-
     </footer>
+
+
+    <!-- JS -->
+    <script src="scripts/ph.js"></script>
 </body>
 
 </html>

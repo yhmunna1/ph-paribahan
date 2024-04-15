@@ -6,12 +6,14 @@ function navigateToSection(sectionId) {
 
 // Seat Section
 document.addEventListener("DOMContentLoaded", function () {
-  const seatButtons = document.querySelectorAll(".btn");
+  const seatButtons = document.querySelectorAll(".seat-btn");
   const seatAvailable = document.getElementById("seat-available");
   const specificSeatDetails = document.getElementById("specific-seat-details");
   const totalPrice = document.querySelector(".total-price");
   const grandPrice = document.querySelector(".grand-price");
   const phoneNumberInput = document.querySelector("input[type='number']");
+  const nameInput = document.querySelector("input[type='text']");
+  const emailInput = document.querySelector("input[type='email']");
   const nextButton = document.querySelector(".btn.btn-disabled");
   const totalSeatsText = document.getElementById("total-seats");
 
@@ -25,6 +27,18 @@ document.addEventListener("DOMContentLoaded", function () {
       "btn-disabled",
       !(isSeatSelected && isPhoneNumberValid)
     );
+  }
+
+  function clearSelectedSeats() {
+    seatButtons.forEach((button) => {
+      button.classList.remove("bg-[#1DD100]", "text-white");
+    });
+
+    specificSeatDetails.innerHTML = "";
+    totalSeatsText.innerText = "0";
+    totalPrice.textContent = "0";
+    grandPrice.textContent = "0";
+    totalSeats = 0;
   }
 
   seatButtons.forEach((button) => {
@@ -86,4 +100,16 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   phoneNumberInput.addEventListener("input", updateNextButtonState);
+
+  const continueButton = document.querySelector(
+    "#my_modal_1 .modal-action button"
+  );
+  continueButton.addEventListener("click", function () {
+    clearSelectedSeats();
+    phoneNumberInput.value = "";
+    nameInput.value = "";
+    emailInput.value = "";
+    updateNextButtonState();
+    my_modal_1.close();
+  });
 });

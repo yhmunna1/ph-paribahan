@@ -10,6 +10,8 @@ document.addEventListener("DOMContentLoaded", function () {
   const seatAvailable = document.getElementById("seat-available");
   const seatDetails = document.getElementById("seat-details");
   const specificSeatDetails = document.getElementById("specific-seat-details");
+  const totalPrice = document.querySelector(".total-price");
+  const grandPrice = document.querySelector(".grand-price");
   console.log(specificSeatDetails);
 
   let totalSeats = 0;
@@ -19,6 +21,7 @@ document.addEventListener("DOMContentLoaded", function () {
       this.classList.toggle("text-white");
 
       const buttonNumber = this.id;
+      const perTicketPrice = 550;
 
       // Update total seat count
       if (this.classList.contains("bg-[#1DD100]")) {
@@ -34,6 +37,11 @@ document.addEventListener("DOMContentLoaded", function () {
                     <div>550</div>
                 `;
         specificSeatDetails.appendChild(seatDetailDiv);
+
+        // Update Total Price
+        const totalPriceValue = totalSeats * perTicketPrice;
+        totalPrice.textContent = totalPriceValue;
+        grandPrice.textContent = totalPriceValue;
       } else {
         totalSeats--;
         seatAvailable.innerText = parseInt(seatAvailable.innerText, 10) + 1;
@@ -45,7 +53,13 @@ document.addEventListener("DOMContentLoaded", function () {
             div.parentNode.remove();
           }
         });
+
+        // Update Total Price
+        const totalPriceValue = totalSeats * perTicketPrice;
+        totalPrice.textContent = totalPriceValue;
+        grandPrice.textContent = totalPriceValue;
       }
+
       console.log(`Selected button number: ${buttonNumber}`);
       console.log(`Total selected seats: ${totalSeats}`);
     });

@@ -8,7 +8,6 @@ function navigateToSection(sectionId) {
 document.addEventListener("DOMContentLoaded", function () {
   const seatButtons = document.querySelectorAll(".btn");
   const seatAvailable = document.getElementById("seat-available");
-  const seatDetails = document.getElementById("seat-details");
   const specificSeatDetails = document.getElementById("specific-seat-details");
   const totalPrice = document.querySelector(".total-price");
   const grandPrice = document.querySelector(".grand-price");

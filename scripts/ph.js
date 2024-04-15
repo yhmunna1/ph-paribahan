@@ -14,6 +14,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const grandPrice = document.querySelector(".grand-price");
   const phoneNumberInput = document.querySelector("input[type='number']");
   const nextButton = document.querySelector(".btn.btn-disabled");
+  const totalSeatsText = document.getElementById("total-seats");
 
   let totalSeats = 0;
 
@@ -50,6 +51,9 @@ document.addEventListener("DOMContentLoaded", function () {
                 `;
         specificSeatDetails.appendChild(seatDetailDiv);
 
+        // Total Seat Indicator
+        totalSeatsText.innerText = parseInt(totalSeatsText.innerText, 10) + 1;
+
         // Update Total Price
         const totalPriceValue = totalSeats * perTicketPrice;
         totalPrice.textContent = totalPriceValue;
@@ -65,6 +69,9 @@ document.addEventListener("DOMContentLoaded", function () {
             div.parentNode.remove();
           }
         });
+
+        // Total Seat Indicator
+        totalSeatsText.innerText = parseInt(totalSeatsText.innerText, 10) - 1;
 
         // Update Total Price
         const totalPriceValue = totalSeats * perTicketPrice;
